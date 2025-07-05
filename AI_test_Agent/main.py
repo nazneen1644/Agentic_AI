@@ -24,6 +24,7 @@ while True :
     if UserInput.lower() == "q":
         break
     reviews = retriever.invoke(UserInput)
+    print("Retrieved reviews:", reviews)
     results = chain.invoke({
     "reviews": reviews,
     "questions": UserInput
